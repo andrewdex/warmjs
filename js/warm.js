@@ -72,7 +72,59 @@
 
             }
 
+        },
+
+        /*An Object array inside the main Warm Namespace  as a library section*/
+        lib: {
+
+            /*Sorting Library*/
+            sorting: {
+
+                bubbleSort: function (arr) {
+
+                    var cleanArray;
+                    if (arr instanceof Array) {
+                        cleanArray = arr;
+
+
+                    } else {
+                        if (arr !== undefined || arr !== "") {
+
+                            cleanArray = arr.split(",");
+
+                        }
+                    }
+
+                    var swapped;
+                    do {
+                        swapped = false;
+                        for (var i = 0; i < cleanArray.length - 1; i++) {
+
+                            if (cleanArray[i] > cleanArray[i + 1]) {
+                                var temp = cleanArray[i];
+                                cleanArray[i] = cleanArray[i + 1];
+                                cleanArray[i + 1] = temp;
+                                swapped = true;
+
+                            }
+
+
+                        }
+
+                    } while (swapped);
+
+                    return cleanArray;
+                }
+
+
+            }
+
+
+
         }
+
+
+
 
     };
 
