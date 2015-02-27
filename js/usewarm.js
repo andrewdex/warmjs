@@ -29,3 +29,16 @@ var instance2 = new warm.exampleClass2();
 //instance2.privateMethod(); //
 
 
+/*Instances of Coder */
+var coder1 = new warm.Coder();
+var coder2 = new warm.Coder();
+
+/*Lets name the coders*/
+coder1.name = "Dilusha";
+coder2.name = "Andrew";
+
+/*Lets make coder1 Hit Enter over coder2*/
+coder1.hitEnter(coder2);//This will deduct Andrew's codeScore by 10 points
+alert(coder2.name+"'s codeScore is " +coder2.codeScore);
+
+

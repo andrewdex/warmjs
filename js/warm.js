@@ -34,11 +34,26 @@
 
             }
 
+        },
+        /*Playing With OOP*/
+        Coder: function () {
+
+            this.name;
+            this.codeScore = 100;
+            this.hitEnter = function (otherCoder) {
+
+                otherCoder.codeScore -= 10;
+                alert(this.name + "Has Pressed Enter and Damaged to " + otherCoder.name);
+
+            }
+
+
         }
 
     };
 
 
+    /*Expose the namespace variable to window object*/
     window.warm = warm;
 
 }());
