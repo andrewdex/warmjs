@@ -51,3 +51,7 @@ warm.Coder.prototype.debug = function (toCoder) {
 
 coder1.debug(coder2);
 alert("Prototype ::" + coder2.name + "'s Code Score has been increased upto " + coder2.codeScore);
+
+/*use prototype property to set new variables*/
+
+
