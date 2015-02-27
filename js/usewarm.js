@@ -50,8 +50,15 @@ warm.Coder.prototype.debug = function (toCoder) {
 };
 
 coder1.debug(coder2);
-alert("Prototype ::" + coder2.name + "'s Code Score has been increased upto " + coder2.codeScore);
+alert("Prototype :: Method Inheritance" + coder2.name + "'s Code Score has been increased upto " + coder2.codeScore);
 
-/*use prototype property to set new variables*/
+/*Use prototype property to set new variables*/
+warm.Coder.prototype.testScore = "100";
+
+/*Display the test Score of both the coders :: Use of inheritance*/
+alert("Prototype :: Inheritance :: "+coder1.name +"'s Test Score : "+coder1.testScore+" And "+coder2.name+"'s Test Score is "+coder2.testScore);
+
+
+
 
 
