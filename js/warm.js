@@ -1,7 +1,7 @@
 /*
  * Warm JS
  * Easy to Learn JavaScript Library Written with Best Practices.
- *
+ * Version : 0.1 Beta
  * */
 
 (function () {
@@ -35,15 +35,16 @@
             }
 
         },
-        /*Playing With OOP*/
+        /*Playing With OOP - without using prototype property*/
         Coder: function () {
+
 
             this.name;
             this.codeScore = 100;
             this.hitEnter = function (otherCoder) {
 
                 otherCoder.codeScore -= 10;
-                alert(this.name + "Has Pressed Enter and Damaged to " + otherCoder.name);
+                alert(this.name + " Has Pressed Enter and Damaged to " + otherCoder.name);
 
             }
 
