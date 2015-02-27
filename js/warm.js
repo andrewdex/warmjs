@@ -49,6 +49,29 @@
             }
 
 
+        },
+        /*OOP :: Advanced Inheritance */
+        /*Parent Class Implementation*/
+        ParentClass: function () {
+
+            this.parentProperty1 = "Hell Yeah, I am the parent !";
+            this.parentMethod = function parentMethod(arg1) {
+
+                return arg1 + " This is parent in the house !";
+
+            }
+
+        },
+        /*Child Class Implementation*/
+        ChildClass: function () {
+
+            this.childProperty1 = "Hell Yeah, I am the Child !";
+            this.childMethod = function childMethod(arg1) {
+
+                arg1 + " This is child in the house !";
+
+            }
+
         }
 
     };

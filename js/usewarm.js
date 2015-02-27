@@ -49,6 +49,7 @@ warm.Coder.prototype.debug = function (toCoder) {
 
 };
 
+/*Lets call debug*/
 coder1.debug(coder2);
 alert("Prototype :: Method Inheritance" + coder2.name + "'s Code Score has been increased upto " + coder2.codeScore);
 
@@ -59,6 +60,20 @@ warm.Coder.prototype.testScore = "100";
 alert("Prototype :: Inheritance :: "+coder1.name +"'s Test Score : "+coder1.testScore+" And "+coder2.name+"'s Test Score is "+coder2.testScore);
 
 
+/*Advanced Inheritance with Prototype Property*/
+/*Create an instance of ParentClass for Child with Prototype Property*/
+warm.ChildClass.prototype =  new warm.ParentClass();
 
+//Child instance of ChildClass
+var childInstance = new warm.ChildClass();
 
+/*Testing if is an instance of */
+alert(childInstance instanceof  warm.ParentClass);
+alert(childInstance instanceof  warm.ChildClass);
 
+warm.ChildClass.prototype.parentMethod = function parentMethod(arg1){
+
+    return arg1 + " Child has overriden the parent method by now ! :)";
+
+}
+alert(childInstance.parentMethod("Hello Parent, !"));
