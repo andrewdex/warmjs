@@ -77,3 +77,15 @@ warm.ChildClass.prototype.parentMethod = function parentMethod(arg1){
 
 }
 alert(childInstance.parentMethod("Hello Parent, !"));
+
+//Different between with use strict and not
+function f1(){
+    return this;
+}
+
+f1() === window; // global object
+
+function f2(){
+    "use strict"; // see strict mode
+    return this;
+}
