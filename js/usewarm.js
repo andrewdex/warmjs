@@ -89,3 +89,13 @@ function f2(){
     "use strict"; // see strict mode
     return this;
 }
+
+//This always refers to the outer object from inside and start the execution from outer to inside
+var o = {
+    prop: 37,
+    f: function() {
+        return this.prop;
+    }
+};
+
+console.log(o.f()); // logs 37
