@@ -57,12 +57,12 @@ alert("Prototype :: Method Inheritance" + coder2.name + "'s Code Score has been 
 warm.Coder.prototype.testScore = "100";
 
 /*Display the test Score of both the coders :: Use of inheritance*/
-alert("Prototype :: Inheritance :: "+coder1.name +"'s Test Score : "+coder1.testScore+" And "+coder2.name+"'s Test Score is "+coder2.testScore);
+alert("Prototype :: Inheritance :: " + coder1.name + "'s Test Score : " + coder1.testScore + " And " + coder2.name + "'s Test Score is " + coder2.testScore);
 
 
 /*Advanced Inheritance with Prototype Property*/
 /*Create an instance of ParentClass for Child with Prototype Property*/
-warm.ChildClass.prototype =  new warm.ParentClass();
+warm.ChildClass.prototype = new warm.ParentClass();
 
 //Child instance of ChildClass
 var childInstance = new warm.ChildClass();
@@ -71,7 +71,7 @@ var childInstance = new warm.ChildClass();
 alert(childInstance instanceof  warm.ParentClass);
 alert(childInstance instanceof  warm.ChildClass);
 
-warm.ChildClass.prototype.parentMethod = function parentMethod(arg1){
+warm.ChildClass.prototype.parentMethod = function parentMethod(arg1) {
 
     return arg1 + " Child has overriden the parent method by now ! :)";
 
@@ -79,13 +79,13 @@ warm.ChildClass.prototype.parentMethod = function parentMethod(arg1){
 alert(childInstance.parentMethod("Hello Parent, !"));
 
 //Different between with use strict and not
-function f1(){
+function f1() {
     return this;
 }
 
 f1() === window; // global object
 
-function f2(){
+function f2() {
     "use strict"; // see strict mode
     return this;
 }
@@ -93,9 +93,24 @@ function f2(){
 //This always refers to the outer object from inside and start the execution from outer to inside
 var o = {
     prop: 37,
-    f: function() {
+    f: function () {
         return this.prop;
     }
 };
+
+console.log(o.f()); // logs 37
+
+/*Note that this behavior is not at all affected by how or where the function was defined.
+ In the previous example, we defined the function inline as the f member during the definition of o.
+ However, we could have just as easily defined the function first and later attached it to o.f.
+ Doing so results in the same behavior:*/
+
+var o = {prop: 37};
+
+function independent() {
+    return this.prop;
+}
+
+o.f = independent;
 
 console.log(o.f()); // logs 37
